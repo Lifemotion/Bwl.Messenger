@@ -1,0 +1,18 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+#
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Bwl.Messenger.App", "Bwl.Messenger.App\Bwl.Messenger.App.vbproj", "{41F4B49A-8389-48B1-85D5-1066C10675B4}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Bwl.Messenger", "Bwl.Messenger\Bwl.Messenger.vbproj", "{48BA4A4C-C501-4B49-89D5-D2ADB4A693AA}"
+EndProject
+Global
+GlobalSection(SolutionConfigurationPlatforms) = preSolution
+Debug|Any CPU = Debug|Any CPU
+Release|Any CPU = Release|Any CPU
+EndGlobalSection
+GlobalSection(SolutionProperties) = preSolution
+HideSolutionNode = False
+EndGlobalSection
+EndGlobal
