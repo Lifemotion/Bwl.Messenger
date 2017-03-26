@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-<ProjectGuid>{41F4B49A-8389-48B1-85D5-1066C10675B4}</ProjectGuid>
+    <ProjectGuid>{41F4B49A-8389-48B1-85D5-1066C10675B4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>Bwl.Messenger.App.My.MyApplication</StartupObject>
     <RootNamespace>Bwl.Messenger.App</RootNamespace>
@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>..\debug\App\bin\</OutputPath>
+    <OutputPath>..\debug\Bwl Messenger\bin\</OutputPath>
     <DocumentationFile>Bwl.Messenger.App.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
@@ -29,7 +29,7 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
-    <OutputPath>..\release\App\bin\</OutputPath>
+    <OutputPath>..\release\Bwl Messenger\bin\</OutputPath>
     <DocumentationFile>Bwl.Messenger.App.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
@@ -52,13 +52,12 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include = "Bwl.Framework" >
-<HintPath>..\refs\bwl-framework\Bwl.Framework.dll</HintPath>
-</Reference>
-<Reference Include = "bwl.Network.ClientServer" >
-<HintPath>..\refs\bwl-framework\bwl.Network.ClientServer.dll</HintPath>
-</Reference>
-
+    <Reference Include="Bwl.Framework">
+      <HintPath>..\refs\bwl-framework\Bwl.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="bwl.Network.ClientServer">
+      <HintPath>..\refs\bwl-framework\bwl.Network.ClientServer.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -73,11 +72,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App.vb">
+    <Compile Include="MessengerForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App.Designer.vb">
-      <DependentUpon>App.vb</DependentUpon>
+    <Compile Include="MessengerForm.Designer.vb">
+      <DependentUpon>MessengerForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -97,6 +96,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MessengerForm.resx">
+      <DependentUpon>MessengerForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -116,12 +118,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-<ProjectReference Include = "..\Bwl.Messenger\Bwl.Messenger.vbproj">
-<Project>{48BA4A4C-C501-4B49-89D5-D2ADB4A693AA}</Project>
-<Name>Bwl.Messenger</Name>
-</ProjectReference>
-</ItemGroup>
-
+    <ProjectReference Include="..\Bwl.Messenger\Bwl.Messenger.vbproj">
+      <Project>{48BA4A4C-C501-4B49-89D5-D2ADB4A693AA}</Project>
+      <Name>Bwl.Messenger</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
