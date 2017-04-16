@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileElement.Designer.vb">
+      <DependentUpon>FileElement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FileElement.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="MessengerForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserElement.Designer.vb">
+      <DependentUpon>UserElement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserElement.vb">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

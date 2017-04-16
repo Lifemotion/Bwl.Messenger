@@ -62,9 +62,6 @@
     <Reference Include="Bwl.Imaging.WinForms">
       <HintPath>..\refs\bwl-imaging\Bwl.Imaging.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="Bwl.Network.Transport">
-      <HintPath>..\refs\bwl-network-transport\Bwl.Network.Transport.dll</HintPath>
-    </Reference>
     <Reference Include="Bwl.Video">
       <HintPath>..\refs\bwl-video\Bwl.Video.dll</HintPath>
     </Reference>
@@ -96,6 +93,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="User.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -115,6 +113,12 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Bwl.Network.Transport\Bwl.Network.Transport\Bwl.Network.Transport.vbproj">
+      <Project>{77a0fb67-cebf-4c85-b82c-f4e62aff6035}</Project>
+      <Name>Bwl.Network.Transport</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
